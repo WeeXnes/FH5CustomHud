@@ -5,8 +5,27 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:FH5CustomHud.Gauges"
         mc:Ignorable="d"
-        Title="BoostGauge" Height="450" Width="800">
+        Title="MainWindow" Height="350" Width="525"
+        Deactivated="BoostGauge_OnDeactivated"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Background="Transparent"
+        MouseDown="BoostGauge_OnMouseDown">
+    <Window.Resources>
+        <Style TargetType="Image">
+            <Setter Property="RenderOptions.BitmapScalingMode" Value="HighQuality" />
+        </Style>
+    </Window.Resources>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         
+        
+        <Image Grid.Column="0" Source="../Images/gauge_s1.png" Width="200" Name="Meter_RPM"/>
+            
+        
+        <Image Source="../Images/needle_s1.png" Name="Needle_RPM" Height="100" Margin="0,0,0,100"></Image>
     </Grid>
 </Window>

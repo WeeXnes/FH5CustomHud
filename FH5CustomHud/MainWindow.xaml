@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FH5CustomHud"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="FH5 Custom Hud" Height="200" Width="500"
+        Closing="SettingsWindow_OnClosing">
+    <Grid HorizontalAlignment="Center" Margin="20">
+        <CheckBox Content="Auto Hide" Checked="ToggleButton_OnChecked" Unchecked="ToggleButton_OnUnchecked"></CheckBox>
     </Grid>
 </Window>
